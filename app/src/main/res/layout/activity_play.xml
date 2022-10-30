@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/back"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/gameEnded"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Over"
+            android:id="@+id/EndResult"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="#FF0000"
+            tools:ignore="HardcodedText"
+            android:layout_marginBottom="50dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click to Play Again"
+            android:textSize="30sp"
+            android:id="@+id/btnPlayAgain"
+            android:background="@drawable/button_background"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/logo_indicator"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/play_area">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="HardcodedText">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textStyle="bold"
+                android:textColor="#800995"
+                android:textSize="75sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/x_move_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Your Move"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="HardcodedText">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="O"
+                android:textColor="#800995"
+                android:textSize="75sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/y_move_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Your Move"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/play_area"
+        app:layout_constraintTop_toBottomOf="@+id/logo_indicator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:background="#2196F3"
+            android:id="@+id/box00"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="75sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text=""
+            android:layout_alignParentStart="true"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/box01"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="75sp"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/box00"
+            android:textStyle="bold"
+            android:text=""
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/box02"
+            android:background="#2196F3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="75sp"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/box01"
+            android:text=""
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/box10"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="75sp"
+            android:gravity="center"
+            android:text=""
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/box00"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/box11"
+            android:background="#2196F3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="75sp"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/box10"
+            android:layout_below="@id/box01"
+            android:text=""
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/box12"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="75sp"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/box01"
+            android:layout_below="@+id/box02"
+            android:text=""
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/box20"
+            android:background="#2196F3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="75sp"
+            android:gravity="center"
+            android:text=""
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/box10"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/box21"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="75sp"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/box00"
+            android:layout_below="@+id/box12"
+            android:text=""
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/box22"
+            android:background="#2196F3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="75sp"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/box01"
+            android:layout_below="@+id/box12"
+            android:text=""
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+    </RelativeLayout>
+
+
+<!--&lt;!&ndash;    rough work&ndash;&gt;-->
+<!--    <TextView-->
+
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/x"-->
+<!--        android:textSize="30sp"-->
+<!--        android:text="Touch to get the x coordinate"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/y"-->
+<!--        tools:ignore="HardcodedText" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/y"-->
+<!--        android:textSize="30sp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Touch to get the y coordinate"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        tools:ignore="HardcodedText" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
