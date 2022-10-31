@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:background="@drawable/help_page"
+    android:padding="30dp"
     tools:context=".AboutPage">
     
     <LinearLayout
@@ -63,7 +64,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/github"
-                android:contentDescription="GitHub" />
+                android:contentDescription="GitHub"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
             

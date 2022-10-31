@@ -17,17 +17,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // move to second page
-        val secondActButton = findViewById<Button>(R.id.playButton)
-        secondActButton.setOnClickListener{
+        val playBtn = findViewById<Button>(R.id.playButton)
+        playBtn.setOnClickListener{
             val intent = Intent(this,play::class.java)
             startActivity(intent)
         }
 
         val helpBtn = findViewById<Button>(R.id.helpBtn);
         helpBtn.setOnClickListener {
-            val helpPage = Intent(this, HelpPage::class.java)
+            val helpPage = Intent(this,HelpPage::class.java)
             startActivity(helpPage)
         }
+        val aboutBtn = findViewById<Button>(R.id.aboutBtn);
+        aboutBtn.setOnClickListener {
+            val helpPage = Intent(this,AboutPage::class.java)
+            startActivity(helpPage)
+        }
+
     }
 
 }
