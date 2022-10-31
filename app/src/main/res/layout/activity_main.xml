@@ -70,7 +70,8 @@
         android:textColor="#FF5722"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameBoard" />
+        app:layout_constraintTop_toBottomOf="@+id/nameBoard"
+        tools:ignore="HardcodedText" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
